@@ -26,22 +26,31 @@ public class Title {
 
     @NotEmpty
     @NotNull
+    @Column(name = "name", nullable = false)
     private String name;
+
     @Column(name = "date_added", nullable = false)
     private String dateAdded;
 
+    @Column(name = "release_year", nullable = false)
     @Min(1900)
     @Max(2022)
     private String releaseYear;
 
+    @Column(name = "rating", nullable = false)
     private String rating;
 
+    @Column(name = "duration", nullable = false)
     private String duration;
 
+    @Column(name = "description", nullable = false)
     private String description;
 
+    @Column(name = "num_Ratings", nullable = false)
     @Min(0)
     private int numRatings;
+
+    @Column(name = "user_rating", nullable = false)
     @Min(0)
     @Max(10)
     private Float userRating;
