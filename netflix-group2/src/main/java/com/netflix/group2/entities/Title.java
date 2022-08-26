@@ -4,15 +4,15 @@ import lombok.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import net.minidev.json.annotate.JsonIgnore;
+import org.hibernate.annotations.ManyToAny;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -27,8 +27,8 @@ public class Title {
     @NotEmpty
     @NotNull
     private String name;
-
-    private String dataAdded;
+    @Column(name = "date_added", nullable = false)
+    private String dateAdded;
 
     @Min(1900)
     @Max(2022)
@@ -45,6 +45,12 @@ public class Title {
     @Min(0)
     @Max(10)
     private Float userRating;
+
+    @ManyToMany
+    @JoinTable(name="title_actor")
+    @JsonIgnore
+    Set<Actor> actor;
+
 
 
 }
