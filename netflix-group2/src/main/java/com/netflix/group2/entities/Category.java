@@ -1,14 +1,13 @@
 package com.netflix.group2.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Set;
 
 @Entity
 @Getter
@@ -24,4 +23,7 @@ public class Category {
 	@NotEmpty
 	@Column(name="name", nullable=false)
 	private String name;
+
+/*	@ManyToMany(mappedBy = "category")
+	Set<Title> title;*/
 }
