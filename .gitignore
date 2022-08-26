@@ -1,0 +1,11 @@
+netflix-group2/bin/
+.project
+netflix-group2/bin/.mvn/wrapper/maven-wrapper.jar
+netflix-group2/bin/.mvn/wrapper/maven-wrapper.properties
+netflix-group2/bin/mvnw
+netflix-group2/bin/.mvn/wrapper/maven-wrapper.jar
+netflix-group2/bin/mvnw.cmd
+netflix-group2/bin/src/main/java/com/netflix/group2/NetflixGroup2Application.class
+netflix-group2/bin/src/main/resources/application.properties
+netflix-group2/bin/src/test/java/com/netflix/group2/NetflixGroup2ApplicationTests.class
+netflix-group2/bin/.mvn/wrapper/maven-wrapper.jar
