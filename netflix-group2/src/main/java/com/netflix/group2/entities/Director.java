@@ -25,6 +25,6 @@ public class Director {
     @Column(name="name")
     private String name;
 
-/*    @ManyToMany(mappedBy = "director")
-    Set<Title> title;*/
+    @ManyToMany(mappedBy = "director")
+    Set<Title> title;
 }

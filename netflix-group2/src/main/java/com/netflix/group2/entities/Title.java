@@ -51,6 +51,15 @@ public class Title {
     @JsonIgnore
     Set<Actor> actor;
 
+    @ManyToMany
+    @JoinTable(name="title_director")
+    @JsonIgnore
+    Set<Director> director;
+
+    @ManyToMany
+    @JoinTable(name="title_category")
+    @JsonIgnore
+    Set<Category> category;
 
 
 }

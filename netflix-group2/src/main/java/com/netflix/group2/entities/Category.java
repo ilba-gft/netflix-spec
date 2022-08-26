@@ -24,6 +24,6 @@ public class Category {
 	@Column(name="name", nullable=false)
 	private String name;
 
-/*	@ManyToMany(mappedBy = "category")
-	Set<Title> title;*/
+	@ManyToMany(mappedBy = "category")
+	Set<Title> title;
 }
